@@ -1,0 +1,28 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:adiso="http://java.sun.com/jsf/composite/adiso">
+
+<ui:composition template="/templates/common/commonLayout.xhtml">
+		<ui:define name="content">
+		<div class="form">
+			<h1>#{msg.registrationTitle}</h1>
+			<adiso:register userNameLabel="#{msg.userName}" userNameValue="#{registration.userName}" 
+			passwordLabel="#{msg.password}" passwordValue="#{registration.password}"
+			passwordRepeatLabel="#{msg.passwordRepeat}" passwordRepeatValue="#{passwordRepeat}"
+			firstNameLabel="#{msg.firstName}" firstNameValue="#{registration.firstName}"
+			lastNameLabel="#{msg.lastName}" lastNameValue="#{registration.lastName}"
+			emailLabel="#{msg.email}" emailValue="#{registration.email}"
+			phoneLabel="#{msg.phone}" phoneValue="#{registration.phone}"
+			cityLabel="#{msg.city}" cityValue="#{registration.city}"
+			postalCodeLabel="#{msg.postalCode}" postalCodeValue="#{registration.postalCode}"
+			btnValue="#{msg.btnRegistration}" btnAction="#{registration.register}"/>
+		</div>
+		</ui:define>
+</ui:composition>
+</html>

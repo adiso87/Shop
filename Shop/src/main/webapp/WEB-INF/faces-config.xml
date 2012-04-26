@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<application>
+		<resource-bundle>
+			<base-name>com.jelastic.adiso87.international.messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
+		<locale-config>
+			<default-locale>pl</default-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+
+	<!-- NAVIGATION RULES -->
+	<navigation-rule>
+		<from-view-id>/admin/addCategory.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{addCategory.add}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/addCategory.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/admin/addProduct.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{addProduct.add}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/admin/addProduct.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

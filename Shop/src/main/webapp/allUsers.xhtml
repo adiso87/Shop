@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:adiso="http://java.sun.com/jsf/composite/adiso">
+
+<ui:composition template="/templates/common/commonLayout.xhtml">
+	<ui:define name="content">
+		<div class="innerContent">
+			<h:dataTable value="#{usersView.allUsers}" var="u"
+				cellspacing="0"
+				cellspadding="0"
+				styleClass="dataPersentation"
+				rowClasses="odd,even"
+				>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.userName}"/>
+					</f:facet>
+					<h:outputText value="#{u.userName}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.firstName}"/>
+					</f:facet>
+					<h:outputText value="#{u.firstName}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.lastName}"/>
+					</f:facet>
+					<h:outputText value="#{u.lastName}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.email}"/>
+					</f:facet>
+					<h:outputText value="#{u.email}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.city}"/>
+					</f:facet>
+					<h:outputText value="#{u.city}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="#{msg.postalCode}"/>
+					</f:facet>
+					<h:outputText value="#{u.postalCode}" />
+				</h:column>
+
+			</h:dataTable>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="shopPU" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/shopJNDI</jta-data-source>
+		<class>com.jelastic.adiso87.Shop.entity.UserDetailEntity</class>
+		<class>com.jelastic.adiso87.Shop.entity.ProductEntity</class>
+		<class>com.jelastic.adiso87.Shop.entity.CategoryEntity</class>
+		<class>com.jelastic.adiso87.Shop.entity.OrderEntity</class>
+		<properties>  
+            <property name="hibernate.hbm2ddl.auto" value="update"/>  
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>  
+        </properties> 
+	</persistence-unit>
+</persistence>

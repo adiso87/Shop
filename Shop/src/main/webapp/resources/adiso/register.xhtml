@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<composite:interface>
+	<composite:attribute name="userNameLabel"/>
+	<composite:attribute name="userNameValue"/>
+	<composite:attribute name="passwordLabel"/>
+	<composite:attribute name="passwordValue"/>
+	<composite:attribute name="passwordRepeatLabel"/>
+	<composite:attribute name="passwordRepeatValue"/>
+	<composite:attribute name="firstNameLabel"/>
+	<composite:attribute name="firstNameValue"/>
+	<composite:attribute name="lastNameLabel"/>
+	<composite:attribute name="lastNameValue"/>
+	<composite:attribute name="emailLabel"/>
+	<composite:attribute name="emailValue"/>
+	<composite:attribute name="phoneLabel"/>
+	<composite:attribute name="phoneValue"/>
+	<composite:attribute name="cityLabel"/>
+	<composite:attribute name="cityValue"/>
+	<composite:attribute name="postalCodeLabel"/>
+	<composite:attribute name="postalCodeValue"/>
+	<composite:attribute name="btnValue"/>
+	<composite:attribute name="btnAction" method-signature="java.lang.String action()"/>
+</composite:interface>
+
+<composite:implementation>
+<h:form>
+	<h:panelGrid columns="4">
+		#{cc.attrs.userNameLabel}:
+		<h:inputText id="userName" value="#{cc.attrs.userNameValue}"/>
+		<h:messages/>
+		<h:messages/>
+ 		#{cc.attrs.passwordLabel}:
+		<h:inputText id="password" value="#{cc.attrs.passwordValue}"/>
+		#{cc.attrs.passwordRepeatLabel}:
+		<h:inputText id="passwordRepeat" value="#{cc.attrs.passwordRepeatValue}"/>
+		#{cc.attrs.firstNameLabel}:
+		<h:inputText id="firstName" value="#{cc.attrs.firstNameValue}"/>
+		#{cc.attrs.lastNameLabel}:
+		<h:inputText id="lastName" value="#{cc.attrs.lastNameValue}"/>
+		#{cc.attrs.emailLabel}:
+		<h:inputText id="email" value="#{cc.attrs.emailValue}"/>
+		#{cc.attrs.phoneLabel}:
+		<h:inputText id="phone" value="#{cc.attrs.phoneValue}"/>
+		#{cc.attrs.cityLabel}:
+		<h:inputText id="city" value="#{cc.attrs.cityValue}"/>
+		#{cc.attrs.postalCodeLabel}:
+		<h:inputText id="postalCode" value="#{cc.attrs.postalCodeValue}"/>
+		<f:facet name="footer">
+		<h:commandButton value="#{cc.attrs.btnValue}" action="#{cc.attrs.btnAction}" styleClass="btn"/>
+		</f:facet>
+	</h:panelGrid>
+</h:form>
+</composite:implementation>
+</html>

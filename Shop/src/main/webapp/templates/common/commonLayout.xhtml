@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<h:outputStylesheet name="common-style.css" library="css" />
+<title><ui:insert name="title">.:: SHOP by Adrian ::.</ui:insert></title>
+</h:head>
+
+<body>
+	<ui:fragment>
+
+		<div id="page">
+			<div id="header">
+				<ui:insert name="header">
+					<ui:include src="commonHeader.xhtml" />
+				</ui:insert>
+			</div>
+			<div class="clear"/>
+			<div id="leftMenu">
+				<ui:insert name="leftMenu">
+					<ui:include src="commonLeftMenu.xhtml"/>
+				</ui:insert>
+			</div>
+			
+			<div id="content">
+				<div class="innerContent">
+				<ui:insert name="content">
+					<ui:include src="commonContent.xhtml" />
+				</ui:insert>
+				</div>
+			</div>
+			<div class="clear"/>
+			<div id="footer">
+				<ui:insert name="footer">
+					<ui:include src="commonFooter.xhtml" />
+				</ui:insert>
+			</div>
+		</div>
+		
+	</ui:fragment>
+</body>
+
+</html>
